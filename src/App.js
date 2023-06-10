@@ -22,9 +22,7 @@ import {
 
 
 function App() {
-  // This function is called when the user clicks the submit button
-
-  // These four lines are used to create a reference to the input field
+  // These four lines are used to create a reference to the input fields
   const [startDate, setStartDate] = useState()
   const [endDate, setEndDate] = useState()
   const [intervals, setIntervals] = useState([{id: uuidv4(), name: "", start: "start", end: "end", sumMinutes: "sumMinutes"}])
@@ -34,11 +32,11 @@ function App() {
   const handleSubmit = (e, name, start, end) => {
     e.preventDefault()
     
-    const startDate = moment(start)
-    const endDate = moment(end)
-    const sumMinutes = endDate.diff(startDate, 'minutes')
-    // add new interval to intervals
-    setIntervals([...intervals, {id: uuidv4(), name: name, start: start, end: end, sumMinutes: sumMinutes}])
+    const startDate = moment(start)  // get start date
+    const endDate = moment(end)  // get end date
+    const sumMinutes = endDate.diff(startDate, 'minutes') // calculate difference in minutes
+
+    setIntervals([...intervals, {id: uuidv4(), name: name, start: start, end: end, sumMinutes: sumMinutes}])  // get the value of the input field
     
   }
 
