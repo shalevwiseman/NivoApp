@@ -20,17 +20,17 @@ import {
   Divider,
 } from "@mui/material";
 
-// First test comment
-// Second test comment
 
 function App() {
+  // This function is called when the user clicks the submit button
 
-  
+  // These four lines are used to create a reference to the input field
   const [startDate, setStartDate] = useState()
   const [endDate, setEndDate] = useState()
   const [intervals, setIntervals] = useState([{id: uuidv4(), name: "", start: "start", end: "end", sumMinutes: "sumMinutes"}])
   const [newTitle, setNewTitle] = useState('')
 
+  // This variable is used to store the value of the input field
   const handleSubmit = (e, name, start, end) => {
     e.preventDefault()
     
