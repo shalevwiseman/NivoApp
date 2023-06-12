@@ -20,7 +20,7 @@ import {
   Divider,
 } from "@mui/material";
 
-
+  
 function App() {
   // These four lines are used to create a reference to the input fields
   const [startDate, setStartDate] = useState()
